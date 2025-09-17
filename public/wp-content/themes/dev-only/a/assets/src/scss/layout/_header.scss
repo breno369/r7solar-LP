@@ -1,0 +1,453 @@
+@use "../mixins" as *;
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @include lg {
+    top: -2.25rem;
+  }
+
+  section:nth-of-type(1) {
+    display: none;
+    overflow: hidden;
+    background-color: hsl(var(--color-background-section));
+
+    @include lg {
+      display: block;
+    }
+
+    .inner {
+      display: flex;
+      height: 2.25rem;
+      align-items: center;
+      justify-content: space-between;
+
+      nav.institutional {
+        ul {
+          display: flex;
+
+          li {
+            display: flex;
+            align-items: center;
+            font-size: 0.75rem;
+
+            a {
+              display: block;
+              padding: 0.375rem 0;
+              font-weight: 500;
+              @include transition-all;
+              color: hsl(var(--color-foreground));
+
+              @include lg {
+                &:hover {
+                  color: hsl(var(--color-foreground) / 60%);
+                }
+              }
+            }
+
+            &::after {
+              content: '|';
+              padding: 0 0.5rem;
+            }
+
+            &:last-child {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      nav.social-link {
+        ul {
+          display: flex;
+          align-items: center;
+          column-gap: 12px;
+
+          li {
+            font-size: 0.75rem;
+
+            i {
+              font-size: 1rem;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 1.625rem;
+              column-gap: 0.375rem;
+              @include transition-colors;
+
+              @include lg {
+                &:hover {
+                  background-color: hsl(var(--color-foreground) / 7%);
+                }
+              }
+            }
+
+            a.whatsapp-link {
+              border-radius: var(--radius-md);
+              padding: 0 0.5rem;
+
+              i {
+                color: hsl(var(--color-whatsapp));
+              }
+            }
+
+            a.icon-link {
+              border-radius: 1.625rem;
+              width: 1.625rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    padding: 0.6875rem 0;
+    border-bottom: 1px solid hsl(var(--color-border));
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+    background-color: hsl(var(--color-background));
+
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        a {
+          display: block;
+
+          img {
+            width: auto;
+            height: 2.5625rem;
+          }
+        }
+      }
+
+      .categories {
+        display: none;
+        align-items: center;
+        column-gap: 1.5rem;
+
+        &.search-form-opened {
+          .nav-categories {
+            opacity: 0;
+
+            a {
+              user-select: none;
+              pointer-events: none;
+              cursor: default;
+            }
+          }
+
+          .search-form {
+            width: calc(0.75rem + 16.25rem + 2rem);
+          }
+        }
+
+        .nav-categories {
+          @include transition-all(300ms);
+
+          ul {
+            display: flex;
+            column-gap: 1.5rem;
+
+            li {
+              a {
+                @include transition-colors;
+                padding: 4px 0;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                font-size: 0.875rem;
+                font-weight: 500;
+
+                @include lg {
+                  &:hover {
+                    border-bottom-color: hsl(var(--color-foreground));
+                  }
+
+                  /* TODO: A solução abaixo é paliativa. Refatorar para o uso da variável --context-color. */
+                  &[href*="cidade"]:hover {
+                    border-bottom-color: hsl(var(--color-cidade));
+                  }
+
+                  &[href*="policial"]:hover {
+                    border-bottom-color: hsl(var(--color-policial));
+                  }
+
+                  &[href*="politica"]:hover {
+                    border-bottom-color: hsl(var(--color-politica));
+                  }
+
+                  &[href*="saude"]:hover {
+                    border-bottom-color: hsl(var(--color-saude));
+                  }
+
+                  &[href*="cultura"]:hover {
+                    border-bottom-color: hsl(var(--color-cultura));
+                  }
+
+                  &[href*="esporte"]:hover {
+                    border-bottom-color: hsl(var(--color-esporte));
+                  }
+
+                  &[href*="economia"]:hover {
+                    border-bottom-color: hsl(var(--color-economia));
+                  }
+
+                  &[href*="lazer"]:hover {
+                    border-bottom-color: hsl(var(--color-lazer));
+                  }
+
+                  &[href*="galerias"]:hover {
+                    border-bottom-color: hsl(var(--color-galerias));
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .search-form {
+          @include transition-all(300ms);
+          width: 2rem;
+          display: flex;
+          justify-content: end;
+          overflow: hidden;
+
+          .inner {
+            display: flex;
+            align-items: center;
+            column-gap: 0.75rem;
+            width: calc(0.75rem + 16.25rem + 2rem);
+
+            input {
+              @include transition-colors;
+              width: 16.25rem;
+              padding: 0.5rem 0.75rem;
+              background-color: hsl(var(--color-foreground) / 7%);
+              font-size: 0.875rem;
+              border-radius: var(--radius);
+              border: 2px solid transparent;
+              outline: none;
+              box-shadow: none;
+
+              &:focus {
+                border-color: hsl(var(--color-foreground))
+              }
+            }
+
+            button {
+              @include transition-colors;
+              flex-shrink: 1;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 2rem;
+              cursor: pointer;
+              line-height: 0;
+
+              @include lg {
+                &:hover {
+                  background-color: hsl(var(--color-foreground) / 7%);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .toggle-mobile-menu {
+        cursor: pointer;
+        margin-right: -0.375rem;
+        padding: 0.375rem;
+        line-height: 0;
+        font-size: 1.5rem;
+      }
+
+    }
+
+    @include lg {
+      padding: 1.1875rem 0;
+
+      .inner {
+        .logo {
+          a {
+            img {
+              width: auto;
+              height: 3.875rem;
+            }
+          }
+        }
+
+        .categories {
+          display: flex;
+        }
+
+        .toggle-mobile-menu {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  @include transition-all(300ms);
+  position: fixed;
+  top: 0;
+  left: calc(100vw + 10px);
+  width: 100vw;
+  height: 100svh;
+  min-height: 100svh;
+  z-index: 100;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+
+  &.mobile-menu-opened {
+    left: 0;
+    opacity: 1;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: black;
+
+    .header-title {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem;
+      background-color: black;
+      z-index: 10;
+
+      h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 0.625rem;
+        margin-right: -0.625rem;
+        font-size: 1.25rem;
+        color: white;
+        line-height: 0;
+      }
+    }
+  }
+
+  .container-search {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background-color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    form {
+      display: flex;
+      width: 100%;
+
+      .inner {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+
+        input {
+          width: 100%;
+          height: 100%;
+          padding: .5rem .75rem;
+          border: 2px solid transparent;
+          border-radius: var(--radius-sm);
+          outline: 0;
+          font-size: .875rem;
+          background-color: #ffffff;
+        }
+
+        button {
+          margin-right: -0.625rem;
+          padding: 0.625rem;
+          padding-left: 1.5rem;
+          font-size: 1.25rem;
+          line-height: 0;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem;
+    color: white;
+
+    nav {
+      h2 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        opacity: 0.7;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    nav.institutional,
+    nav.categories {
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          a {
+            margin-left: -0.25rem;
+            display: inline-block;
+            padding: 0.25rem;
+            // font-size: 0.875rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    nav.social-links {
+      ul {
+        display: flex;
+        column-gap: 1rem;
+
+        li {
+          a {
+            margin-left: -0.25rem;
+            padding: 0.25rem;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

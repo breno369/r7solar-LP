@@ -1,0 +1,68 @@
+@use "../mixins" as *;
+
+section.share {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .link-share {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .5rem .75rem .5rem .75rem;
+    background-color: hsl(var(--color-muted)/10%);
+    color: hsl(var(--context-color));
+    border-radius: var(--radius-sm);
+    @include transition-all();
+    @include transition-colors();
+
+    @include lg {
+      display: flex;
+
+      &:hover {
+        color: hsl(0, 100%, 100%) !important;
+        background-color: hsl(var(--context-color)) !important;
+      }
+    }
+
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  .link-share-mobile {
+    display: flex;
+    cursor: pointer;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .copyable-button {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    .content-copy {
+      position: absolute;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      top: .5rem;
+      @include transition-all();
+    }
+  }
+
+  .copyable-success {
+    .content-copy {
+      position: absolute;
+      transform: translateY(-2.3rem);
+    }
+  }
+}

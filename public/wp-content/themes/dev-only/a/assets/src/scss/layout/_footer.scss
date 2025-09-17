@@ -1,0 +1,174 @@
+@use 'mixins' as *;
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
+
+  @include md {
+    padding: 3rem 0;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @include md {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include md {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      img {
+        width: 2.875rem;
+        height: auto;
+      }
+
+      figcaption {
+        font-size: 0.875rem;
+        color: #b5b5b5;
+      }
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      ul {
+        display: flex;
+        row-gap: 8px;
+        column-gap: 8px;
+      }
+    }
+
+    nav.categories,
+    nav.institutional {
+      ul {
+        flex-direction: column;
+
+        li {
+          a {
+            @include transition-colors;
+            font-size: 14px;
+            font-weight: 500;
+            color: #b5b5b5;
+
+            @include lg {
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    nav.social-links {
+      ul {
+        li {
+          a {
+            @include transition-colors;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 99px;
+            width: 32px;
+            height: 32px;
+            font-size: 1.25rem;
+            color: #b5b5b5;
+            background-color: rgba(255, 255, 255, 0.1);
+
+            @include lg {
+              &:hover {
+                background-color: rgba(255, 255, 255, 1);
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .legal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6px;
+    color: #b5b5b5;
+
+    @include sm {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    .developer {
+      a {
+        display: block;
+        position: relative;
+
+        small {
+          @include transition-all;
+          display: none;
+          top: 2px;
+          width: 6.5rem;
+          left: -6.5rem;
+          color: #b5b5b5;
+          position: absolute;
+          user-select: none;
+          padding: 6px 0;
+        }
+
+        img {
+          width: auto;
+          height: 1.25rem;
+        }
+
+        @include md {
+          padding: 6px 0;
+
+          small {
+            opacity: 0;
+            display: block;
+          }
+
+          @include lg {
+            &:hover {
+              small {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

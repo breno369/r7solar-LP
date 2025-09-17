@@ -1,0 +1,51 @@
+@use 'mixins' as *;
+
+:root {
+  --font-family-heading: Oswald, Impact, sans-serif;
+  --font-sans: Helvetica, Arial, sans-serif;
+
+  /* This color can be overridden in specific contexts */
+  --context-color: 0 100% 50%;
+
+  --color-cidade: 212 100% 64%;
+  --color-policial: 1 79% 43%;
+  --color-politica: 217 67% 35%;
+  --color-saude: 263 61% 70%;
+  --color-cultura: 27 100% 57%;
+  --color-esporte: 144 77% 38%;
+  --color-economia: 180 91% 21%;
+  --color-lazer: 38 99% 57%;
+  --color-galerias: 301 94% 25%;
+
+  --color-dark: 0 0% 0%;
+  --color-facebook: 221 83% 53%;
+  --color-linkedin: 224 76% 48%;
+  --color-whatsapp: 143 72.1% 48.5%;
+
+  --color-background: 43 100% 100%;
+  --color-foreground: 43 100% 0%;
+  --color-border: 0 0% 89.8%;
+  --color-muted: 0 0% 45.1%;
+  --color-danger: 0 100% 48%;
+  --color-background-section: 0 0% 96%;
+
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --layout-space: 1rem;
+
+  @include lg {
+    --layout-space: 1rem;
+  }
+
+  @include xl {
+    --layout-space: 1.5rem;
+  }
+
+  @include xxl {
+    --layout-space: 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+nav.breadcrumb {
+  ol {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      min-width: 0;
+      flex-shrink: 0;
+
+      &:last-child {
+        flex-shrink: unset;
+      }
+
+      a,
+      i {
+        color: hsl(var(--color-muted));
+      }
+
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+main {
+  padding-bottom: 0;
+
+  .container-main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include md {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+    }
+
+    .container-not-found {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .title-404 {
+        margin-bottom: .5rem;
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: .025em;
+
+        @include lg {
+          font-size: 7rem;
+        }
+      }
+
+      .title {
+        margin-bottom: .5rem;
+        font-size: 1.875rem;
+        font-weight: 700;
+        letter-spacing: .025em;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include lg {
+          font-size: 2.5rem;
+        }
+      }
+
+      .text {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        color: hsl(215, 14%, 34%);
+
+        @include lg {
+          font-size: 1.25rem;
+        }
+      }
+
+      .link-home-back {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        width: 100%;
+        height: 2.75rem;
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border: none;
+        border-radius: .3rem;
+        font-size: .875rem;
+        font-weight: 500;
+        line-height: 1.75;
+        text-align: center;
+        background-color: hsl(var(--color-foreground));
+        color: hsl(var(--color-background));
+
+        @include lg {
+          &:hover {
+            background-color: hsl(var(--color-foreground) / 90%);
+          }
+        }
+
+        @include sm {
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+  .container-see-also {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: hsl(var(--color-background-section) / 60%);
+
+    @include md {
+      padding-bottom: 4rem;
+      padding-top: 4rem;
+    }
+
+    .container-also {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .title {
+        margin-bottom: 2rem;
+        font-size: 1.875rem;
+        font-weight: 700;
+        letter-spacing: .025em;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include md {
+          font-size: 2.25rem;
+        }
+      }
+
+      .content-see-also {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: 40rem;
+
+        .see-also {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          min-height: 2.75rem;
+          height: 100%;
+          padding: .75rem;
+          border: solid 1px transparent;
+          border-radius: .3rem;
+          font-size: 1rem;
+          text-align: center;
+          background-color: hsl(var(--color-background));
+          box-shadow: 0 4px 6px -1px #00000005, 0 2px 4px -2px #00000005;
+
+          @include lg {
+            &:hover {
+              background-color: hsl(var(--color-background) / 10%);
+              border: solid 1px hsl(var(--color-border) / 30%);
+            }
+          }
+
+          .container-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: .75rem;
+            padding-right: .75rem;
+
+            .title-post {
+              font-size: 1rem;
+              text-align: start;
+              color: hsl(var(--color-foreground));
+              // @include line-clamp(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

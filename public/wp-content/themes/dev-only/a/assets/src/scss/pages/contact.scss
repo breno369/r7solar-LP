@@ -1,0 +1,450 @@
+@use '../mixins' as *;
+
+main {
+  padding-top: 0;
+
+  .main-banner {
+    position: relative;
+
+    .container-background-image {
+      overflow: hidden;
+      aspect-ratio: 1080/972;
+
+      @include md {
+        aspect-ratio: 1920/540;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+      }
+    }
+
+    .container-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 42rem;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      .title-banner {
+        font-size: 2.25rem;
+        font-weight: 700;
+        letter-spacing: .025em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 1rem;
+
+        @include md {
+          font-size: 3rem;
+          line-height: 1;
+        }
+
+        @include lg {
+          font-size: 3.75rem;
+          line-height: 1;
+        }
+      }
+
+      .text-banner {
+        font-size: 1.25rem;
+        color: #ffffff;
+      }
+    }
+  }
+
+  section.container-contact-us {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include md {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .container-contact {
+      max-width: 1400px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .content-contact {
+        display: grid;
+        grid-template: auto / auto;
+        gap: 2rem;
+        max-width: 64rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include md {
+          grid-template: auto / auto auto;
+        }
+
+        .block-contact {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 1.5rem;
+          border-radius: .75rem;
+          background-color: #f9fafb;
+
+          .icon-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100px;
+            background-color: #0000000d;
+
+            & i {
+              font-size: 1.5rem;
+            }
+          }
+
+          .title-contact {
+            margin-bottom: .5rem;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            font-weight: 700;
+          }
+
+          .text-contact {
+            margin-bottom: .5rem;
+            color: rgb(75, 85, 99);
+          }
+
+          .link-contact {
+            width: fit-content;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+
+  .container-form-contact {
+    background-color: #f9fafb;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include md {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .content-form-contact {
+      max-width: 1400px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .content-form {
+        max-width: 48rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .container-title {
+          text-align: center;
+          margin-bottom: 2.5rem;
+
+          .title {
+            margin-bottom: 1rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 2.25rem;
+            letter-spacing: .025em;
+            text-transform: uppercase;
+
+            @include md {
+              font-size: 2.25rem;
+              line-height: 2.5rem;
+            }
+          }
+
+          .text {
+            margin: 0;
+            color: rgb(75, 85, 99);
+          }
+        }
+
+        .container-form {
+          padding: 2rem;
+          border-radius: .75rem;
+          background-color: #ffffff;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+          form {
+            .container-fields {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+
+              .content-field {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &:nth-child(2) {
+                  flex-direction: column;
+                  gap: 1rem;
+
+                  @include md {
+                    flex-direction: row;
+                  }
+                }
+
+                .field-row {
+                  width: 100%;
+                }
+
+                label {
+                  width: fit-content;
+                  font-size: .875rem;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  color: rgb(10, 10, 10);
+                }
+
+                .field {
+                  display: flex;
+                  height: 2.5rem;
+                  width: 100%;
+                  padding: .5rem .75rem .5rem .75rem;
+                  font-size: .75rem;
+                  border: solid 1px rgb(229, 229, 229);
+                  border-radius: .3rem;
+                  background-color: rgb(255, 255, 255);
+
+                  @include md {
+                    line-height: 1.25rem;
+                  }
+
+                  @include sm {
+                    font-size: .875rem;
+                  }
+
+                  &:focus-visible {
+                    outline-color: black;
+                    outline-style: solid;
+                    outline-width: 2px;
+                    outline-offset: 2px;
+                    box-shadow: 0px 0px 0px 2px transparent;
+                  }
+                }
+
+                .custom-select {
+                  cursor: pointer;
+
+                  option {
+                    font-size: .875rem;
+                  }
+                }
+
+                .textarea-field {
+                  min-height: 150px;
+                  resize: vertical;
+                }
+              }
+            }
+
+            .button-form {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: .5rem;
+              width: 100%;
+              height: 2.75rem;
+              margin-top: 1.5rem;
+              padding-left: 2rem;
+              padding-right: 2rem;
+              border: none;
+              border-radius: .3rem;
+              font-size: .875rem;
+              line-height: 1.25rem;
+              background-color: #000000;
+              color: #ffffff;
+              transition-duration: .15s;
+
+              @include lg {
+                &:hover {
+                  background-color: rgb(0, 0, 0, .9);
+                }
+              }
+
+              i {
+                margin-right: .5rem;
+                font-size: 1rem;
+              }
+            }
+
+            &>p {
+              margin: 0;
+            }
+
+            .wpcf7-response-output {
+              margin-left: 0;
+              margin-right: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .container-frequently-asked {
+    background-color: #ffffff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include md {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .content-frequently-asked {
+      max-width: 1400px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      @include md {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .container-asked {
+        max-width: 48rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        .container-title-asked {
+          text-align: center;
+          margin-bottom: 2.5rem;
+
+          .title-asked {
+            margin-bottom: 1rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 2.25rem;
+            letter-spacing: .025em;
+            text-transform: uppercase;
+            color: rgb(10, 10, 10);
+
+            @include md {
+              font-size: 2.25rem;
+              line-height: 2.5rem;
+            }
+          }
+
+          .subtitle-asked {
+            margin: 0;
+            color: rgb(75, 85, 99);
+          }
+        }
+
+        .content-asked {
+          .question {
+            border: none;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: rgb(229, 229, 229);
+
+            .btn-question {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+              padding-left: 0;
+              padding-right: 0;
+              background-color: #ffffff;
+              border: none;
+              cursor: pointer;
+
+              @include lg {
+                &:hover {
+                  .btn-text {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              .btn-text {
+                margin: 0;
+                font-size: 1rem;
+                font-weight: 500;
+
+              }
+
+              .arrow-active {
+                display: block;
+              }
+            }
+
+            .content-question-answer {
+              display: none;
+              padding-bottom: 1rem;
+
+
+              &>* {
+                margin: 0;
+                padding: 0;
+                font-size: .875rem;
+                line-height: 1.25rem;
+
+                a {
+                  font-weight: 600;
+                  text-underline-offset: 4px;
+                  text-decoration-line: underline;
+                  color: #000000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
