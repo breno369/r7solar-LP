@@ -1,0 +1,353 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elemento Flutuante</title>
+<style>
+  body {
+    height: 200vh; /* apenas para ter rolagem */
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  /* Elemento flutuante */
+  .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .floating-btn i {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotação quando "para cima" */
+  .floating-btn.up i {
+    transform: rotate(180deg);
+  }
+
+  /* Terceiro elemento */
+  .third-element {
+    margin: 100vh auto 0 auto;
+    width: 80%;
+    padding: 40px;
+    background: lightblue;
+    text-align: center;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="third-element" id="third">
+    Eu sou o terceiro elemento
+  </div>
+
+  <div class="floating-btn" id="floatBtn">
+    <i id="arrow">↓</i>
+  </div>
+
+<script>
+  const floatBtn = document.getElementById('floatBtn');
+  const arrow = document.getElementById('arrow');
+  const third = document.getElementById('third');
+
+  // Observa quando o terceiro elemento está visível na tela
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        floatBtn.classList.remove('up'); // seta para baixo
+      } else {
+        floatBtn.classList.add('up'); // seta para cima
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(third);
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Troca seta ↔ mouse</title>
+<style>
+  body {
+    height: 250vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  .floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .arrow, .mouse {
+    position: absolute;
+    opacity: 1;
+  }
+
+  .arrow {
+    font-size: 32px;
+    color: #333;
+  }
+
+  .mouse {
+    width: 28px;
+    height: 48px;
+    border: 2px solid #333;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0; /* começa invisível */
+  }
+
+  .dot {
+    position: absolute;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #333;
+    opacity: 0;
+    animation: scrollDot 2s infinite;
+  }
+
+  @keyframes scrollDot {
+    0% { top: 5px; opacity: 0; }
+    20% { opacity: 1; }
+    50% { top: 30px; opacity: 1; }
+    80% { opacity: 0; }
+    100% { top: 40px; opacity: 0; }
+  }
+
+  /* descer até sumir */
+  @keyframes slideDown {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(120vh); opacity: 0; }
+  }
+
+  /* subir até posição fixa */
+  @keyframes slideUp {
+    from { transform: translateY(120vh); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .slide-down {
+    animation: slideDown 0.8s forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s forwards;
+  }
+</style>
+</head>
+<body>
+
+  <div class="third-element" id="third"
+       style="margin:120vh auto 0; width:80%; padding:40px; background:lightblue; border-radius:10px; text-align:center;">
+    Eu sou o terceiro elemento
+  </div>
+
+  <div class="floating-btn" id="floatBtn">
+    <span class="arrow" id="arrow">↓</span>
+    <div class="mouse" id="mouse">
+      <div class="dot"></div>
+    </div>
+  </div>
+
+<script>
+  const arrow = document.getElementById('arrow');
+  const mouse = document.getElementById('mouse');
+  const third = document.getElementById('third');
+  let current = "arrow";
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && current === "arrow") {
+        // seta desce
+        arrow.classList.add("slide-down");
+        arrow.addEventListener("animationend", () => {
+          arrow.style.opacity = "0";
+          arrow.style.display = "none";
+          arrow.classList.remove("slide-down");
+          arrow.style.transform = "none"; // reset
+
+          // mouse sobe
+          mouse.style.display = "flex";
+          mouse.classList.add("slide-up");
+          current = "mouse";
+          mouse.addEventListener("animationend", () => {
+            mouse.classList.remove("slide-up");
+            mouse.style.opacity = "1";
+            mouse.style.transform = "none"; // fixa na posição
+          }, { once: true });
+        }, { once: true });
+      } 
+      else if (!entry.isIntersecting && current === "mouse") {
+        // mouse desce
+        mouse.classList.add("slide-down");
+        mouse.addEventListener("animationend", () => {
+          mouse.style.opacity = "0";
+          mouse.style.display = "none";
+          mouse.classList.remove("slide-down");
+          mouse.style.transform = "none"; // reset
+
+          // seta sobe
+          arrow.style.display = "block";
+          arrow.classList.add("slide-up");
+          current = "arrow";
+          arrow.addEventListener("animationend", () => {
+            arrow.classList.remove("slide-up");
+            arrow.style.opacity = "1";
+            arrow.style.transform = "none"; // fixa na posição
+          }, { once: true });
+        }, { once: true });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(third);
+</script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll to top com fade</title>
+<style>
+  body {
+    height: 250vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
+</style>
+</head>
+<body>
+
+  <div style="margin-top:200vh; background:lightblue; padding:40px;">
+    Conteúdo final da página
+  </div>
+
+
+
+
+
+
+
+
+  <button id="scrollToTopBtn" style="
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+">↑</button>
+
+<script>
+function scrollToTop(duration = 800) {
+  const start = window.pageYOffset;
+  const startTime = performance.now();
+
+  function easeInOutCubic(t) {
+    return t < 0.5
+      ? 4 * t * t * t          // acelera
+      : 1 - Math.pow(-2 * t + 2, 3) / 2; // desacelera
+  }
+
+  function animation(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeInOutCubic(progress);
+
+    window.scrollTo(0, start * (1 - easedProgress));
+
+    if (elapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+
+document.getElementById("scrollToTopBtn").addEventListener("click", () => {
+  scrollToTop(900); // tempo ideal ~0.9s (nem rápido demais, nem lento)
+});
+</script>
+</body>
+</html>

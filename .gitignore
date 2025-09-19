@@ -1,6 +1,1 @@
-.env
-
-/.docker/mysql/data
-/.docker/nginx/logs
-
-public/wp-content/themes/r7theme/dev-only
+dev-only/
