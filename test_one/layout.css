@@ -753,6 +753,9 @@
   .bg-transparent {
     background-color: transparent;
   }
+  .bg-primary {
+    background-color: var(--primary);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -1266,6 +1269,26 @@
       }
     }
   }
+  .hover\:bg-transparent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--primary);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--primary) 0%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:bg-primary {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--primary);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--primary) 100%, transparent);
+        }
+      }
+    }
+  }
   .hover\:bg-primary\/10 {
     &:hover {
       @media (hover: hover) {
@@ -1293,6 +1316,20 @@
         @supports (color: color-mix(in lab, red, red)) {
           background-color: color-mix(in oklab, var(--secondary) 80%, transparent);
         }
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .hover\:text-primary {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--primary);
       }
     }
   }

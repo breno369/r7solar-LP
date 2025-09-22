@@ -1,3 +1,6 @@
+// import { animate, onScroll } from 'animejs';
+
+const AOS = window.AOS
 const arrow = document.getElementById('arrow');
 const mouse = document.getElementById('mouse');
 const third = document.getElementById('first-section');
@@ -78,3 +81,70 @@ arrow.addEventListener("click", () => {
 });
 
 observer.observe(third);
+
+
+// Add smooth reveal animation for elements
+function addRevealAnimation() {
+  const revealElements = document.querySelectorAll(".section")
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1"
+          entry.target.style.transform = "translateY(0)"
+        }
+      })
+    },
+    {
+      threshold: 0.1,
+    },
+  )
+
+  revealElements.forEach((element) => {
+    element.style.opacity = "0"
+    element.style.transform = "translateY(20px)"
+    element.style.transition = "opacity 0.6s ease, transform 0.6s ease"
+    revealObserver.observe(element)
+  })
+}
+
+// Initialize AOS (Animate On Scroll)
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        offset: 100,
+    })
+
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger)
+
+    // Initialize all functionality
+    initNavigation()
+    initScrollEffects()
+    initAnimations()
+    initCalculator()
+    initForms()
+    initCounters()
+})
+
+// Initialize reveal animations
+document.addEventListener("DOMContentLoaded", addRevealAnimation)
+
+const animation = animate('.square', {
+    x: '15rem',
+    rotate: '1turn',
+    ease: 'linear',
+});
+
+const scrollObserver = onScroll({
+    container: '.scroll-container',
+    enter: 'bottom-=50 top',
+    leave: 'top+=60 bottom',
+    sync: true,
+    debug: true,
+});
+
+scrollObserver.link(animation);
