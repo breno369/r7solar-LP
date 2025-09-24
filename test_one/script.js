@@ -1,6 +1,3 @@
-// import { animate, onScroll } from 'animejs';
-
-const AOS = window.AOS
 const arrow = document.getElementById('arrow');
 const mouse = document.getElementById('mouse');
 const third = document.getElementById('first-section');
@@ -108,43 +105,3 @@ function addRevealAnimation() {
     revealObserver.observe(element)
   })
 }
-
-// Initialize AOS (Animate On Scroll)
-document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        offset: 100,
-    })
-
-    // Initialize GSAP ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger)
-
-    // Initialize all functionality
-    initNavigation()
-    initScrollEffects()
-    initAnimations()
-    initCalculator()
-    initForms()
-    initCounters()
-})
-
-// Initialize reveal animations
-document.addEventListener("DOMContentLoaded", addRevealAnimation)
-
-const animation = animate('.square', {
-    x: '15rem',
-    rotate: '1turn',
-    ease: 'linear',
-});
-
-const scrollObserver = onScroll({
-    container: '.scroll-container',
-    enter: 'bottom-=50 top',
-    leave: 'top+=60 bottom',
-    sync: true,
-    debug: true,
-});
-
-scrollObserver.link(animation);
