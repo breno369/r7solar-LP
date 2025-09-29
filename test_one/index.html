@@ -16,6 +16,11 @@
     <script src="page.js" async=""></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
     <meta name="next-size-adjust" content="">
 
     <title>R7solar</title>
@@ -249,9 +254,8 @@
                 </div>
             </div>
         </header>
-        <section
-            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-white"
-            id="first-section">
+        <section id="first-section"
+            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-white">
             <div class="absolute inset-0 z-0">
                 <img src="../assets/img/background-main-banner.jpg" alt="Paneles solares en chalet valenciano"
                     class="w-full h-full object-cover opacity-20">
@@ -432,23 +436,27 @@
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-triangle-alert w-6 h-6 text-destructive animate-pulse"
+                                class="icon-card lucide lucide-triangle-alert w-6 h-6 text-destructive animate-pulse"
                                 aria-hidden="true">
                                 <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3">
                                 </path>
                                 <path d="M12 9v4"></path>
                                 <path d="M12 17h.01"></path>
-                            </svg><span class="text-lg font-semibold text-destructive">Pierdes hasta €1,200 al año en
-                                electricidad cara</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-triangle-alert w-6 h-6 text-destructive animate-pulse"
+                            </svg>
+                            <span class="second-card-btn text-lg font-semibold text-destructive">Pierdes hasta €1,200 al
+                                año en
+                                electricidad cara</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="icon-card lucide lucide-triangle-alert w-6 h-6 text-destructive animate-pulse"
                                 aria-hidden="true">
                                 <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3">
                                 </path>
                                 <path d="M12 9v4"></path>
                                 <path d="M12 17h.01"></path>
-                            </svg></div>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -487,9 +495,10 @@
                                             class="lucide lucide-check w-5 h-5 text-green-600" aria-hidden="true">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <h3 class="text-xl font-semibold text-foreground">Ahorro Inmediato</h3><span
-                                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">100%
-                                            ahorro</span>
+                                        <h3 class="text-xl font-semibold text-foreground">Ahorro Inmediato</h3>
+                                        <span
+                                            class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                            100% ahorro</span>
                                     </div>
                                     <p class="text-muted-foreground text-pretty leading-relaxed">Reduce hasta 100% tu
                                         factura con autoconsumo solar – más dinero para ti y tu familia.</p>
@@ -516,9 +525,10 @@
                                             class="lucide lucide-check w-5 h-5 text-green-600" aria-hidden="true">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <h3 class="text-xl font-semibold text-foreground">Instalación Rápida</h3><span
-                                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">15
-                                            días</span>
+                                        <h3 class="text-xl font-semibold text-foreground">Instalación Rápida</h3>
+                                        <span
+                                            class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                            15 días</span>
                                     </div>
                                     <p class="text-muted-foreground text-pretty leading-relaxed">Todo listo en solo 15
                                         días, sin burocracia ni sorpresas.</p>
@@ -546,9 +556,10 @@
                                             class="lucide lucide-check w-5 h-5 text-green-600" aria-hidden="true">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <h3 class="text-xl font-semibold text-foreground">Subvenciones Fáciles</h3><span
-                                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">ROI
-                                            3-5 años</span>
+                                        <h3 class="text-xl font-semibold text-foreground">Subvenciones Fáciles</h3>
+                                        <span
+                                            class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                            ROI 3-5 años</span>
                                     </div>
                                     <p class="text-muted-foreground text-pretty leading-relaxed">Aprovecha incentivos
                                         fiscales de 2025-2030 para recuperar tu inversión en 3-5 años.</p>
@@ -576,9 +587,10 @@
                                             class="lucide lucide-check w-5 h-5 text-green-600" aria-hidden="true">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <h3 class="text-xl font-semibold text-foreground">Seguridad Total</h3><span
-                                            class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">Sin
-                                            cortes</span>
+                                        <h3 class="text-xl font-semibold text-foreground">Seguridad Total</h3>
+                                        <span
+                                            class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                            Sin cortes</span>
                                     </div>
                                     <p class="text-muted-foreground text-pretty leading-relaxed">Olvídate de cortes de
                                         luz con energía limpia y fiable para tu chalet.</p>
@@ -613,11 +625,11 @@
                             class="text-lg md:text-xl text-card-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
                             Un proceso simple y transparente para transformar tu hogar</p>
                     </div>
-                    <div class="steps-section relative">
+                    <div class="steps-section relative" id="line-steps">
                         <div
-                            class="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl">
+                            class="container-line hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl">
                             <div class="line h-1 bg-gradient-to-r from-blue-500 via-primary to-green-500 rounded-full origin-left"
-                                style="transform: none;"></div>
+                                id="line" style="transform: none;"></div>
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
                             <div class="relative text-center" style="opacity: 1; transform: none;">
@@ -718,8 +730,8 @@
             </section>
         </section>
         <section id="testimonios">
-            <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
-                <div class="swiper container mx-auto px-4">
+            <section class="pt-20 bg-gradient-to-b from-blue-50 to-white">
+                <div class="swiper container mx-auto px-4" style="padding-bottom: calc(var(--spacing) * 20);">
                     <div class="text-center mb-16" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Lo Que Dicen
                             Nuestros Clientes en Valencia</h2>
@@ -727,7 +739,7 @@
                             class="text-lg md:text-xl text-card-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
                             Historias reales de ahorro y satisfacción</p>
                     </div>
-                    <div class="swiper-wrapper grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="swiper-wrapper grid grid-cols-1 md:grid-cols-3 mb-12"><!-- gap-8 -->
 
                         <div class="swiper-slide bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 relative"
                             style="opacity: 1; transform: none;">
@@ -1190,60 +1202,47 @@
                             Agenda tu reunión por WhatsApp y empieza a transformar tu factura en ahorro real.</p>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="bg-white rounded-2xl p-8 shadow-2xl border border-primary/20"
-                            style="opacity: 1; transform: none;">
-                            <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">Consulta Gratuita
-                                Inmediata</h3>
-                            <form class="space-y-4">
-                                <div><input type="text" data-slot="input"
-                                        class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive w-full p-4 text-lg"
-                                        placeholder="Tu nombre completo" required="" value=""></div>
-                                <div><input type="tel" data-slot="input"
-                                        class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive w-full p-4 text-lg"
-                                        placeholder="Tu teléfono" required="" value=""></div>
-                                <div><input type="text" data-slot="input"
-                                        class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 min-w-0 rounded-md border bg-transparent shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive w-full p-4 text-lg"
-                                        placeholder="Tu zona (Valencia, Alicante, Castellón...)" required="" value="">
-                                </div><button data-slot="button"
-                                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 px-6 has-[&gt;svg]:px-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow"
-                                    type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-message-circle mr-2 w-5 h-5" aria-hidden="true">
-                                        <path
-                                            d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
-                                        </path>
-                                    </svg>Habla con Nosotros Ahora<svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="lucide lucide-arrow-right ml-2 w-5 h-5" aria-hidden="true">
-                                        <path d="M5 12h14"></path>
-                                        <path d="m12 5 7 7-7 7"></path>
-                                    </svg></button>
-                            </form>
-                            <div class="mt-6 text-center">
-                                <p class="text-sm text-muted-foreground mb-4">✓ Respuesta en menos de 1 hora ✓ Sin
-                                    compromiso ✓ Totalmente gratuito</p>
-                                <div class="flex flex-col sm:flex-row gap-3"><button data-slot="button"
-                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 flex-1 border-primary text-primary hover:bg-primary/10 bg-transparent"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        <div class="space-y-6" style="opacity: 1; transform: none;">
+                            <div class="bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl p-6 border border-primary/30"
+                                style="opacity: 1; transform: none;">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary mb-2">¡Últimos días para subvenciones
+                                        2025!</div>
+                                    <div class="text-muted-foreground">No pierdas hasta €3,000 en ayudas del gobierno
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-8 shadow-2xl border border-primary/20"
+                                style="opacity: 1; transform: none;">
+
+                                <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">Consulta Gratuita
+                                    Inmediata</h3>
+                                <form class="space-y-4">
+                                    <button data-slot="button"
+                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 px-6 has-[&gt;svg]:px-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow"
+                                        type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-message-circle mr-2 w-4 h-4" aria-hidden="true">
+                                            class="lucide lucide-message-circle mr-2 w-5 h-5" aria-hidden="true">
                                             <path
                                                 d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
                                             </path>
-                                        </svg>WhatsApp Directo</button><button data-slot="button"
-                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 flex-1 border-primary text-primary hover:bg-primary/10 bg-transparent"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-phone mr-2 w-4 h-4" aria-hidden="true">
-                                            <path
-                                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
-                                            </path>
-                                        </svg>Llamar Ahora</button></div>
+                                        </svg>Habla con Nosotros Ahora<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right ml-2 w-5 h-5" aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="m12 5 7 7-7 7"></path>
+                                        </svg></button>
+                                </form>
+                                <div class="mt-6 text-center">
+                                    <p class="text-sm text-muted-foreground"><!-- mb-4 -->✓ Respuesta en menos de 1 hora
+                                        ✓
+                                        Sin
+                                        compromiso ✓ Totalmente gratuito</p>
+                                </div>
                             </div>
+
                         </div>
                         <div class="space-y-6" style="opacity: 1; transform: none;">
                             <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
@@ -1270,15 +1269,6 @@
                                             class="text-card-foreground">ROI en 3-5 años</span>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="bg-gradient-to-r from-primary/20 to-primary/10 rounded-2xl p-6 border border-primary/30"
-                                style="opacity: 1; transform: none;">
-                                <div class="text-center">
-                                    <div class="text-2xl font-bold text-primary mb-2">¡Últimos días para subvenciones
-                                        2025!</div>
-                                    <div class="text-muted-foreground">No pierdas hasta €3,000 en ayudas del gobierno
-                                    </div>
-                                </div>
                             </div>
                             <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                                 <h4 class="text-lg font-semibold text-foreground mb-4">Información de Contacto</h4>
@@ -1320,15 +1310,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-primary-foreground"
-                                    aria-hidden="true">
-                                    <path
-                                        d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
-                                    </path>
-                                </svg></div><span class="text-xl font-bold text-foreground">R7 Solar</span>
+                            <div class="w-32 h-10 flex justify-center items-center gap-3">
+                                <img src="../assets/img/logo-texto-preto-semfundo.png" alt="" srcset="">
+                                <!-- <span class="text-xl font-bold text-foreground">R7 Solar</span> -->
+                            </div>
                         </div>
                         <p class="text-muted-foreground text-sm text-pretty">Especialistas en energía solar para hogares
                             unifamiliares en la Comunidad Valenciana. Ahorro garantizado y instalación profesional.</p>
@@ -1354,21 +1339,30 @@
                     <div class="space-y-4">
                         <h3 class="font-semibold text-foreground">Contacto</h3>
                         <div class="space-y-3">
-                            <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-phone w-4 h-4 text-primary" aria-hidden="true">
+                            <a href="tel://622 63 52 40"
+                                class="flex items-center gap-3 text-sm h-text-accent-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-phone w-4 h-4 text-primary"
+                                    aria-hidden="true">
                                     <path
                                         d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
                                     </path>
-                                </svg><span class="text-muted-foreground">+34 600 000 000</span></div>
-                            <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-mail w-4 h-4 text-primary" aria-hidden="true">
-                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                </svg><span class="text-muted-foreground">info@r7solar.es</span></div>
+                                </svg><span class="text-muted-foreground transition-all duration-300">622 63 52
+                                    40</span>
+                            </a>
+                            <a href="https://www.instagram.com/r7solar/" target="_blank" title="Instagram"
+                                class="flex items-center gap-3 text-sm h-text-accent-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f1bd24"
+                                    viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-map-pin w-4 h-4 text-primary" aria-hidden="true">
+                                    <path
+                                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                                    </path>
+                                </svg>
+                                <span class="text-muted-foreground transition-all duration-300">r7solar</span>
+                            </a>
                             <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
                                     width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1378,25 +1372,25 @@
                                     </path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg><span class="text-muted-foreground">Valencia, España</span></div>
-                            <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-message-circle w-4 h-4 text-primary" aria-hidden="true">
+                            <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                                onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
+                                title="WhatsApp" class="flex items-center gap-3 text-sm h-text-accent-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-message-circle w-4 h-4 text-primary"
+                                    aria-hidden="true">
                                     <path
                                         d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
                                     </path>
-                                </svg><span class="text-muted-foreground">WhatsApp 24/7</span></div>
+                                </svg>
+                                <span class="text-muted-foreground transition-all duration-300">WhatsApp 24/7</span>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="border-t border-border mt-8 pt-8 text-center">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p class="text-sm text-muted-foreground">© 2025 R7 Solar. Todos los derechos reservados.</p>
-                        <div class="flex gap-6 text-sm text-muted-foreground">
-                            <a href="#" class="hover:text-foreground transition-colors">Política de Privacidad</a>
-                            <a href="#" class="hover:text-foreground transition-colors">Términos de Servicio</a>
-                            <a href="#" class="hover:text-foreground transition-colors">Aviso Legal</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1416,11 +1410,35 @@
         </div>
     </div>
 
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="script.js" defer></script>
+
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs'
+
+        const line = document.querySelector(".steps-section .line");
+        const circle1 = document.querySelector(".first-circle");
+        const circle2 = document.querySelector(".second-circle");
+        const circle3 = document.querySelector(".third-circle");
+
+        window.addEventListener("load", seClass())
+        window.addEventListener("resize", seClass())
+
+        function seClass() {
+            const lineSteps = document.getElementById("line-steps");
+            const line = document.getElementById("line");
+            if (window.innerWidth > 1280) {
+                console.log("add class");
+                lineSteps.classList.add("steps-section");
+                line.classList.add("line");
+            } else {
+                console.log("remove class");
+                lineSteps.classList.remove("steps-section");
+                line.classList.remove("line");
+            }
+        }
 
         new Swiper('.swiper', {
             direction: 'horizontal',
@@ -1434,28 +1452,11 @@
                 delay: 3000,
             },
             spaceBetween: 20,
-            a11y: {
-                enabled: true,
-                slideLabelMessage: 'Slide {{index}} de {{slidesLength}}',
-                containerMessage: 'Carrossel de notícias em destaque',
-                slideRole: 'article',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
+            slidesPerView: 3,
+            centeredSlides: true,
         });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js" defer=""></script>
 
-    <script>
         gsap.registerPlugin(ScrollTrigger);
-
-        const line = document.querySelector(".steps-section .line");
-        const circle1 = document.querySelector(".first-circle");
-        const circle2 = document.querySelector(".second-circle");
-        const circle3 = document.querySelector(".third-circle");
-
         gsap.to(line, {
             maskSize: "100% 100%",
             WebkitMaskSize: "100% 100%",
@@ -1465,7 +1466,7 @@
                 start: "top 90%",
                 end: "bottom 48%",
                 scrub: 0.5,
-                markers: true,
+                // markers: true,
                 onUpdate: self => update_circle(self.progress.toFixed(2)),
                 // onUpdate: self => console.log("Progresso:", self.progress.toFixed(2)),
             }
@@ -1491,11 +1492,6 @@
                 circle3.style.background = "#bdbfc4";
             }
         }
-    </script>
-
-    <script src="script.js" defer=""></script>
-    <script type="module">
-        // import { animate, onScroll } from 'animejs';
 
         const AOS = window.AOS
         // Initialize AOS (Animate On Scroll)
