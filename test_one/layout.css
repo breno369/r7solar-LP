@@ -2792,10 +2792,41 @@
 }
 
 
+@media screen and (max-width: 1280px) {
+  .container-line {
+    max-width: 40rem;
+    --tw-translate-y: calc(calc(5 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .first-circle {
+    background-color: #155dfc !important;
+  }
+
+  .second-circle {
+    background-color: #f0b100 !important;
+  }
+
+  .third-circle {
+    background-color: #00a63e !important;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .floating-btn {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
-  .container-line{}
-  .line{}
-  
+  .icon-process {
+    display: none;
+  }
+
+  .container-line {}
+
+  .line {}
+
   .second-card-btn {
     font-size: var(--text-sm);
   }
@@ -2816,6 +2847,66 @@
     height: 1rem;
   }
 
+}
+
+@media screen and (max-width: 500px) {
+  .icon-card {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .title-testimonios {
+    font-size: .9rem;
+  }
+
+  .text-testimonios {
+    font-size: .75rem;
+  }
+
+  .botao-consulta {
+    gap: 0;
+  }
+
+  .grid-beneficios {
+    gap: calc(var(--spacing) * 6);
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .mb16-to-mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+
+  .py-20 {
+    padding-block: calc(var(--spacing) * 12);
+  }
+
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+
+  .swiper {
+    padding-bottom: calc(var(--spacing) * 12) !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .botao-consulta {
+    font-size: 1rem;
+  }
+
+  .text-problema {
+    font-size: .9rem;
+  }
+
+}
+
+@media screen and (min-width: 501px) {
+  .swiper {
+    padding-bottom: calc(var(--spacing) * 20) !important;
+  }
 }
 
 /* 

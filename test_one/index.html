@@ -66,21 +66,19 @@
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1211px) {
             .floating-btn {
-                display: block;
+                display: flex;
             }
         }
 
         .floating-btn {
-            display: none;
             position: fixed;
             bottom: 40px;
             right: 55px;
             /* bottom: calc(var(--spacing) * 12); */
             width: 60px;
             height: 60px;
-            display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -275,7 +273,7 @@
                                 class="text-primary animate-pulse-glow">100%</span> en tu Factura Eléctrica</h1>
                         <h2 class="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto"
                             style="opacity: 1; transform: none;">con Energía Solar en Valencia</h2>
-                        <p class="text-lg md:text-xl text-card-foreground mb-12 text-pretty max-w-4xl mx-auto leading-relaxed"
+                        <p class="text-lg md:text-xl text-card-foreground mb-12 text-pretty max-w-4xl mx-auto leading-relaxed hide-mobile"
                             style="opacity: 1; transform: none;">Instalación rápida en 15 días. Recupera tu inversión en
                             pocos años y olvídate de cortes de luz. Sin complicaciones, solo ahorro real para tu hogar
                             unifamiliar.</p>
@@ -350,11 +348,11 @@
         <section id="problema">
             <section class="py-20 bg-gradient-to-b from-red-50 to-white">
                 <div class="container mx-auto px-4" data-aos="fade-up">
-                    <div class="text-center mb-16" style="opacity: 1; transform: none;">
+                    <div class="text-center mb-16 mb16-to-mb-12" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">¿Cansado de
                             Facturas Altas y Cortes de Luz?</h2>
                         <p
-                            class="text-lg md:text-xl text-card-foreground max-w-4xl mx-auto text-pretty leading-relaxed">
+                            class="text-lg md:text-xl text-card-foreground max-w-4xl mx-auto text-pretty leading-relaxed hide-mobile">
                             Cada mes, pierdes hasta 80-100% de tu dinero en electricidad cara. Imagina: facturas que
                             suben sin control, subvenciones perdidas y cortes inesperados que arruinan tu comodidad. Si
                             vives en un chalet o adosado en Valencia, Alicante o Castellón, esto es tu realidad
@@ -376,7 +374,7 @@
                             </div>
                             <h3 class="text-xl font-semibold text-foreground mb-3 text-balance">Facturas que Suben Sin
                                 Control</h3>
-                            <p class="text-muted-foreground text-pretty">Cada mes pagas más por la misma electricidad
+                            <p class="text-problema text-muted-foreground text-pretty">Cada mes pagas más por la misma electricidad
                             </p>
                         </div>
                         <div class="text-center" style="opacity: 1; transform: none;">
@@ -395,7 +393,7 @@
                             </div>
                             <h3 class="text-xl font-semibold text-foreground mb-3 text-balance">Subvenciones Perdidas
                             </h3>
-                            <p class="text-muted-foreground text-pretty">Miles de euros en ayudas que no aprovechas</p>
+                            <p class="text-problema text-muted-foreground text-pretty">Miles de euros en ayudas que no aprovechas</p>
                         </div>
                         <div class="text-center" style="opacity: 1; transform: none;">
                             <div
@@ -413,7 +411,7 @@
                             <h3 class="text-xl font-semibold text-foreground mb-3 text-balance">Cortes Inesperados</h3>
                             <p class="text-muted-foreground text-pretty">Interrupciones que arruinan tu comodidad</p>
                         </div>
-                        <div class="text-center" style="opacity: 1; transform: none;">
+                        <div class="text-problema text-center" style="opacity: 1; transform: none;">
                             <div
                                 class="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mx-auto mb-4 group hover:bg-destructive/20 transition-colors duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -428,7 +426,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold text-foreground mb-3 text-balance">Dependencia Total</h3>
-                            <p class="text-muted-foreground text-pretty">Sin control sobre tu consumo energético</p>
+                            <p class="text-problema text-muted-foreground text-pretty">Sin control sobre tu consumo energético</p>
                         </div>
                     </div>
                     <div class="mt-16 text-center" style="opacity: 1; transform: none;">
@@ -464,14 +462,14 @@
         <section id="beneficios">
             <section class="py-20 bg-gradient-to-b from-green-50 to-white">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16" style="opacity: 1; transform: none;">
+                    <div class="text-center mb-16 mb16-to-mb-12" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Con R7 Solar,
                             Ahorra de Verdad y Vive Mejor</h2>
                         <p
                             class="text-lg md:text-xl text-card-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
                             Transforma tu hogar en una central de energía limpia y rentable</p>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="grid-beneficios grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                         <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                             style="opacity: 1; transform: none;" data-aos="fade-up">
                             <div class="flex items-start gap-4">
@@ -500,7 +498,7 @@
                                             class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
                                             100% ahorro</span>
                                     </div>
-                                    <p class="text-muted-foreground text-pretty leading-relaxed">Reduce hasta 100% tu
+                                    <p class="text-problema text-muted-foreground text-pretty leading-relaxed">Reduce hasta 100% tu
                                         factura con autoconsumo solar – más dinero para ti y tu familia.</p>
                                 </div>
                             </div>
@@ -530,7 +528,7 @@
                                             class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
                                             15 días</span>
                                     </div>
-                                    <p class="text-muted-foreground text-pretty leading-relaxed">Todo listo en solo 15
+                                    <p class="text-problema text-muted-foreground text-pretty leading-relaxed">Todo listo en solo 15
                                         días, sin burocracia ni sorpresas.</p>
                                 </div>
                             </div>
@@ -561,7 +559,7 @@
                                             class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
                                             ROI 3-5 años</span>
                                     </div>
-                                    <p class="text-muted-foreground text-pretty leading-relaxed">Aprovecha incentivos
+                                    <p class="text-problema text-muted-foreground text-pretty leading-relaxed">Aprovecha incentivos
                                         fiscales de 2025-2030 para recuperar tu inversión en 3-5 años.</p>
                                 </div>
                             </div>
@@ -592,7 +590,7 @@
                                             class="badge-cards bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
                                             Sin cortes</span>
                                     </div>
-                                    <p class="text-muted-foreground text-pretty leading-relaxed">Olvídate de cortes de
+                                    <p class="text-problema text-muted-foreground text-pretty leading-relaxed">Olvídate de cortes de
                                         luz con energía limpia y fiable para tu chalet.</p>
                                 </div>
                             </div>
@@ -610,7 +608,7 @@
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg>
                         </button>
-                        <p class="text-sm text-muted-foreground mt-4">Calculadora gratuita de ahorro personalizada</p>
+                        <p class="text-sm text-muted-foreground mt-4 hide-mobile">Calculadora gratuita de ahorro personalizada</p>
                     </div>
                 </div>
             </section>
@@ -618,7 +616,7 @@
         <section id="proceso">
             <section class="py-20 bg-gradient-to-b from-white to-blue-50">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16" style="opacity: 1; transform: none;">
+                    <div class="text-center mb-16 mb16-to-mb-12" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Así de Fácil: Tu
                             Energía Solar en 3 Pasos</h2>
                         <p
@@ -638,7 +636,7 @@
                                     <!-- bg-gradient-to-br from-blue-500 to-blue-600  -->
                                     <span class="text-2xl font-bold text-white">1</span>
                                 </div>
-                                <div class="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
+                                <div class="icon-process w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
                                     style="opacity: 1; transform: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -665,7 +663,7 @@
                                     <!-- bg-gradient-to-br from-primary to-yellow-500 -->
                                     <span class="text-2xl font-bold text-white">2</span>
                                 </div>
-                                <div class="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
+                                <div class="icon-process w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
                                     style="opacity: 1; transform: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -699,7 +697,7 @@
                                     <!-- bg-gradient-to-br from-green-500 to-green-600 -->
                                     <span class="text-2xl font-bold text-white">3</span>
                                 </div>
-                                <div class="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
+                                <div class="icon-process w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-6"
                                     style="opacity: 1; transform: none;"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -731,8 +729,8 @@
         </section>
         <section id="testimonios">
             <section class="pt-20 bg-gradient-to-b from-blue-50 to-white">
-                <div class="swiper container mx-auto px-4" style="padding-bottom: calc(var(--spacing) * 20);">
-                    <div class="text-center mb-16" style="opacity: 1; transform: none;">
+                <div class="swiper container mx-auto px-4">
+                    <div class="text-center mb-16 mb16-to-mb-12" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">Lo Que Dicen
                             Nuestros Clientes en Valencia</h2>
                         <p
@@ -1079,9 +1077,9 @@
                                     alt="Miguel García"
                                     class="w-10 h-10 rounded-full border-2 border-white object-cover">
                             </div>
-                            <div class="text-left">
-                                <div class="font-semibold text-foreground">Más de 100 instalaciones exitosas</div>
-                                <div class="text-sm text-muted-foreground">en la Comunidad Valenciana – únete a ellos
+                            <div class="text-left ml-2">
+                                <div class="title-testimonios font-semibold text-foreground">Más de 100 instalaciones exitosas</div>
+                                <div class="text-testimonios text-sm text-muted-foreground">en la Comunidad Valenciana – únete a ellos
                                 </div>
                             </div>
                         </div>
@@ -1092,7 +1090,7 @@
         <section id="garantias">
             <section class="py-20 bg-gradient-to-b from-green-50 to-white">
                 <div class="container mx-auto px-4">
-                    <div class="text-center mb-16" style="opacity: 1; transform: none;">
+                    <div class="text-center mb-16 hide-mobile" style="opacity: 1; transform: none;">
                         <h2 class="text-3xl md:text-5xl font-bold text-foreground mb-6 text-balance">¿Dudas? Te Cubrimos
                         </h2>
                         <p
@@ -1218,8 +1216,7 @@
                                 <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">Consulta Gratuita
                                     Inmediata</h3>
                                 <form class="space-y-4">
-                                    <button data-slot="button"
-                                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 px-6 has-[&gt;svg]:px-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow"
+                                    <button data-slot="button" class="botao-consulta inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 px-6 has-[&gt;svg]:px-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow"
                                         type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -1414,7 +1411,6 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer=""></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
     <script src="script.js" defer></script>
-
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs'
 
@@ -1423,10 +1419,11 @@
         const circle2 = document.querySelector(".second-circle");
         const circle3 = document.querySelector(".third-circle");
 
-        window.addEventListener("load", seClass())
-        window.addEventListener("resize", seClass())
+        window.addEventListener("load", setClass())
+        // window.addEventListener("resize", setClass())
+        window.onresize = setClass;
 
-        function seClass() {
+        function setClass() {
             const lineSteps = document.getElementById("line-steps");
             const line = document.getElementById("line");
             if (window.innerWidth > 1280) {
@@ -1451,9 +1448,21 @@
             autoplay: {
                 delay: 3000,
             },
-            spaceBetween: 20,
-            slidesPerView: 3,
-            centeredSlides: true,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+            },
+            // centeredSlides: true,
         });
 
         gsap.registerPlugin(ScrollTrigger);
