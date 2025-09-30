@@ -2802,7 +2802,7 @@
   .first-circle {
     background-color: #155dfc !important;
   }
-
+  
   .second-circle {
     background-color: #f0b100 !important;
   }
@@ -2816,6 +2816,12 @@
   .floating-btn {
     display: none;
   }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .botao-consulta {
+    font-size: .98rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2892,21 +2898,32 @@
   }
 }
 
-@media screen and (max-width: 440px) {
-  .botao-consulta {
-    font-size: 1rem;
-  }
-
-  .text-problema {
-    font-size: .9rem;
-  }
-
+@media screen and (max-width: 505px) {
+    .botao-consulta {
+    font-size: .98rem;
+    }
 }
 
 @media screen and (min-width: 501px) {
   .swiper {
     padding-bottom: calc(var(--spacing) * 20) !important;
   }
+}
+
+@media screen and (max-width: 490px) {
+  .botao-consulta {
+    font-size: .9rem;
+    text-align: center;
+    padding-block: calc(var(--spacing) * 7);
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+  .text-problema {
+    font-size: .9rem;
+  }
+
 }
 
 /* 
