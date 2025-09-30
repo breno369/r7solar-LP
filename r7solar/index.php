@@ -212,7 +212,7 @@
                             </svg>
                             Llamar
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             data-slot="button"
                             class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-8 shadow-xs rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 bg-primary hover:bg-transparent hover:text-primary text-white border border-primary">
@@ -292,7 +292,7 @@
                             </div>
                         </div>
                         <div class="space-y-4" style="opacity: 1; transform: none;">
-                            <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                            <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                                 onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                                 data-slot="button"
                                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 has-[&gt;svg]:px-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow">
@@ -417,7 +417,7 @@
                         </div>
                     </div>
                     <div class="mt-16 text-center" style="opacity: 1; transform: none;">
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="inline-flex items-center gap-4 bg-destructive/10 px-8 py-4 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -460,7 +460,7 @@
                             Transforma tu hogar en una central de energía limpia y rentable</p>
                     </div>
                     <div class="grid-beneficios grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                             style="opacity: 1; transform: none;" data-aos="fade-up">
@@ -497,7 +497,7 @@
                             </div>
 
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                             style="opacity: 1; transform: none;" data-aos="fade-up">
@@ -531,7 +531,7 @@
                             </div>
 
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                             style="opacity: 1; transform: none;" data-aos="fade-up">
@@ -566,7 +566,7 @@
                             </div>
 
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
                             style="opacity: 1; transform: none;" data-aos="fade-up">
@@ -603,7 +603,7 @@
                         </a>
                     </div>
                     <div class="text-center" style="opacity: 1; transform: none;">
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             data-slot="button"
                             class="inline-flex items-center justify-center gap-2 whitespace-nowrap disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 has-[&gt;svg]:px-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
@@ -725,7 +725,7 @@
                         </div>
                     </div>
                     <div class="mt-16 text-center" style="opacity: 1; transform: none;">
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                             class="inline-flex items-center gap-4 bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
                             <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -1126,7 +1126,7 @@
                             Garantías sólidas para tu tranquilidad total</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});">
                             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 text-center group"
                                 style="opacity: 1; transform: none;">
@@ -1150,7 +1150,7 @@
                                     compromiso – solo pagas si te convence.</p>
                             </div>
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});">
                             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 text-center group"
                                 style="opacity: 1; transform: none;">
@@ -1175,7 +1175,7 @@
                                     mantenimiento incluido para tranquilidad.</p>
                             </div>
                         </a>
-                        <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                        <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                             onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});">
                             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 text-center group"
                                 style="opacity: 1; transform: none;">
@@ -1254,7 +1254,7 @@
                                 <h3 class="text-2xl font-semibold text-foreground mb-6 text-center">Consulta Gratuita
                                     Inmediata</h3>
                                 <form class="space-y-4">
-                                    <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                                    <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                                         onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                                         data-slot="button"
                                         class="botao-consulta inline-flex items-center justify-center gap-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 px-6 has-[&gt;svg]:px-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-glow">
@@ -1314,7 +1314,7 @@
                             <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
                                 <h4 class="text-lg font-semibold text-foreground mb-4">Información de Contacto</h4>
                                 <div class="space-y-3 text-sm">
-                                    <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                                    <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                                         onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                                         title="WhatsApp" class="flex items-center gap-3 h-text-accent-foreground">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -1433,7 +1433,7 @@
                                 </svg>
                                 <span class="text-muted-foreground">r7solar</span>
                             </a>
-                            <a href="https://bit.ly/R7Solar_Whatsapp" target="_blank"
+                            <a href="https://meulink.fit/DpYZhmTnJMUIDQY" target="_blank"
                                 onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/LABEL'});"
                                 title="WhatsApp" class="flex items-center gap-3 text-sm h-text-accent-foreground">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
