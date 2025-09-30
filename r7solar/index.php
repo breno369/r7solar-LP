@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?= esc_attr(get_bloginfo('charset')) ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="assets/img/ favicon-light.ico" media="(prefers-color-scheme: dark)"
-        type="image/x-icon">
-    <link rel="shortcut icon" href="assets/img/favicon-dark.ico" media="(prefers-color-scheme: light)"
-        type="image/x-icon">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="shortcut icon" href="<?= esc_url(get_template_directory_uri() . '/assets/img/ favicon-light.ico') ?>" media="(prefers-color-scheme: dark)" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= esc_url(get_template_directory_uri() . '/assets/img/favicon-dark.ico') ?>" media="(prefers-color-scheme: light)" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="layout.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
@@ -26,42 +24,6 @@
         document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))
     </script>
     <style>
-        @font-face {
-            font-family: '__nextjs-Geist';
-            font-style: normal;
-            font-weight: 400 600;
-            font-display: swap;
-            src: url(/__nextjs_font/geist-latin-ext.woff2) format('woff2');
-            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: '__nextjs-Geist Mono';
-            font-style: normal;
-            font-weight: 400 600;
-            font-display: swap;
-            src: url(/__nextjs_font/geist-mono-latin-ext.woff2) format('woff2');
-            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: '__nextjs-Geist';
-            font-style: normal;
-            font-weight: 400 600;
-            font-display: swap;
-            src: url(/__nextjs_font/geist-latin.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: '__nextjs-Geist Mono';
-            font-style: normal;
-            font-weight: 400 600;
-            font-display: swap;
-            src: url(/__nextjs_font/geist-mono-latin.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
         @media screen and (min-width: 1211px) {
             .floating-btn {
                 display: flex;
@@ -201,24 +163,30 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10804121619"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'AW-10804121619');
     </script>
     <script>
-        gtag('event', 'conversion', { 'send_to': 'AW-10804121619/wVk1CMLCqJ0bEJOg558o' });
+        gtag('event', 'conversion', {
+            'send_to': 'AW-10804121619/wVk1CMLCqJ0bEJOg558o'
+        });
     </script>
+    <?php wp_head(); ?>
 </head>
 
-<body class="__variable_188709 __variable_9a8899 antialiased" cz-shortcut-listen="true">
+<body class="<?php body_class(); ?> __variable_188709 __variable_9a8899 antialiased" cz-shortcut-listen="true">
     <main class="min-h-screen">
         <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm"
             style="opacity: 1; transform: none;">
             <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between h-16">
                     <div class="w-32 h-10 flex justify-center items-center gap-3">
-                        <img src="../assets/img/logo-texto-preto-semfundo.png" alt="" srcset="">
+                        <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/logo-texto-preto-semfundo.png') ?>" alt="" srcset="">
                         <!-- <span class="text-xl font-bold text-foreground">R7 Solar</span> -->
                     </div>
                     <nav class="hidden md:flex items-center gap-8">
@@ -265,7 +233,7 @@
         <section id="first-section"
             class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 to-white">
             <div class="absolute inset-0 z-0">
-                <img src="../assets/img/background-main-banner.jpg" alt="Paneles solares en chalet valenciano"
+                <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/background-main-banner.jpg') ?>" alt="Paneles solares en chalet valenciano"
                     class="w-full h-full object-cover opacity-20">
                 <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/70"></div>
             </div>
@@ -835,7 +803,7 @@
                                 "<!-- -->Con R7 Solar, mi factura bajó 90% en el primer mes. Instalación impecable en 12
                                 días – ¡recomendadísimo!<!-- -->"</blockquote>
                             <div class="flex items-center gap-4"><img
-                                    src="../assets/img/spanish-man-58-years-old-smiling-professional-head.jpg"
+                                    src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-58-years-old-smiling-professional-head.jpg') ?>"
                                     alt="Juan Martínez" class="w-12 h-12 rounded-full object-cover">
                                 <div class="flex-1">
                                     <div class="font-semibold text-foreground">Juan Martínez</div>
@@ -899,7 +867,7 @@
                                 "<!-- -->Aproveché las subvenciones y recuperé la inversión rápido. Adiós a los cortes
                                 de luz en mi chalet.<!-- -->"</blockquote>
                             <div class="flex items-center gap-4"><img
-                                    src="../assets/img/spanish-man-62-years-old-happy-professional-headsh.jpg"
+                                    src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-62-years-old-happy-professional-headsh.jpg') ?>"
                                     alt="Carlos Rodríguez" class="w-12 h-12 rounded-full object-cover">
                                 <div class="flex-1">
                                     <div class="font-semibold text-foreground">Carlos Rodríguez</div>
@@ -963,7 +931,7 @@
                                 "<!-- -->Simple y efectivo: ahorro real sin complicaciones. Mi vida es más tranquila
                                 gracias a R7.<!-- -->"</blockquote>
                             <div class="flex items-center gap-4"><img
-                                    src="../assets/img/spanish-man-50-years-old-confident-professional-he.jpg"
+                                    src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-50-years-old-confident-professional-he.jpg') ?>"
                                     alt="Miguel García" class="w-12 h-12 rounded-full object-cover">
                                 <div class="flex-1">
                                     <div class="font-semibold text-foreground">Miguel García</div>
@@ -1125,13 +1093,13 @@
                         <div
                             class="inline-flex items-center gap-4 bg-white/90 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
                             <div class="flex -space-x-2">
-                                <img src="../assets/img/spanish-man-58-years-old-smiling-professional-head.jpg"
+                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-58-years-old-smiling-professional-head.jpg') ?>"
                                     alt="Juan Martínez"
                                     class="w-10 h-10 rounded-full border-2 border-white object-cover">
-                                <img src="../assets/img/spanish-man-62-years-old-happy-professional-headsh.jpg"
+                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-62-years-old-happy-professional-headsh.jpg') ?>"
                                     alt="Carlos Rodríguez"
                                     class="w-10 h-10 rounded-full border-2 border-white object-cover">
-                                <img src="../assets/img/spanish-man-50-years-old-confident-professional-he.jpg"
+                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/spanish-man-50-years-old-confident-professional-he.jpg') ?>"
                                     alt="Miguel García"
                                     class="w-10 h-10 rounded-full border-2 border-white object-cover">
                             </div>
@@ -1413,7 +1381,7 @@
                     <div class="space-y-4">
                         <div class="flex items-center gap-3">
                             <div class="w-32 h-10 flex justify-center items-center gap-3">
-                                <img src="../assets/img/logo-texto-preto-semfundo.png" alt="" srcset="">
+                                <img src="<?= esc_url(get_template_directory_uri() . '/assets/img/logo-texto-preto-semfundo.png') ?>" alt="" srcset="">
                                 <!-- <span class="text-xl font-bold text-foreground">R7 Solar</span> -->
                             </div>
                         </div>
@@ -1518,7 +1486,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer=""></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs'
 
@@ -1641,6 +1609,9 @@
 
         scrollObserver.link(animation);
     </script>
+    
+    <?php wp_footer(); ?>
+
 </body>
 
 </html>
